@@ -1,8 +1,7 @@
 import React, { useState, useContext } from "react";
 import Alert from "../common/Alert";
-import JoblyApi from "../api/api";
+import DnDApi from "../api/api";
 import UserContext from "../auth/UserContext";
-
 
 // import useTimedMessage from "../hooks/useTimedMessage";
 
@@ -65,7 +64,7 @@ function ProfileForm() {
     let updatedUser;
 
     try {
-      updatedUser = await JoblyApi.saveProfile(username, profileData);
+      updatedUser = await DnDApi.saveProfile(username, profileData);
     } catch (errors) {
       debugger;
       setFormErrors(errors);

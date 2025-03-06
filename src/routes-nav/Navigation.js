@@ -3,13 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import UserContext from "../auth/UserContext";
 import "./Navigation.css";
 
-/** Navigation bar for site. Shows up on every page.
- *
- * When user is logged in, shows links to main areas of site. When not,
- * shows link to Login and Signup forms.
- *
- * Rendered by App.
- */
 
 function Navigation({ logout }) {
   const { currentUser } = useContext(UserContext);
@@ -19,18 +12,18 @@ function Navigation({ logout }) {
     return (
         <ul className="navbar-nav ml-auto">
           <li className="nav-item mr-4">
-            <NavLink className="nav-link" to="/companies">
-              Companies
-            </NavLink>
-          </li>
-          <li className="nav-item mr-4">
-            <NavLink className="nav-link" to="/jobs">
-              Jobs
-            </NavLink>
-          </li>
-          <li className="nav-item mr-4">
             <NavLink className="nav-link" to="/profile">
               Profile
+            </NavLink>
+          </li>
+          <li className="nav-item mr-4">
+            <NavLink className="nav-link" to="/spellList">
+              Spells
+            </NavLink>
+          </li>
+          <li className="nav-item mr-4">
+            <NavLink className="nav-link" to="/favorites">
+              Favorites
             </NavLink>
           </li>
           <li className="nav-item">
@@ -62,7 +55,7 @@ function Navigation({ logout }) {
   return (
       <nav className="Navigation navbar navbar-expand-md">
         <Link className="navbar-brand" to="/">
-          Jobly
+          Home
         </Link>
         {currentUser ? loggedInNav() : loggedOutNav()}
       </nav>

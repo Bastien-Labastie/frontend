@@ -1,0 +1,64 @@
+.spell-details-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.spell-details-content {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.spell-details-header {
+  margin-bottom: 20px;
+}
+
+.spell-details-header .title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3a3a3a;
+  margin-bottom: 10px;
+}
+
+.spell-details-header .level, .spell-details-header .school {
+  font-size: 1rem;
+  color: #777;
+}
+
+.spell-details-info {
+  margin-top: 20px;
+}
+
+.spell-details-section {
+  margin-bottom: 15px;
+}
+
+.spell-details-section h2 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.spell-details-section p {
+  font-size: 1rem;
+  color: #34495e;
+}
+
+/* Back button style */
+.go-back-button {
+  padding: 10px 20px;
+  background-color: #3eb489;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.go-back-button:hover {
+  background-color: #368874;
+}

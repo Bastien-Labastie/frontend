@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 import Alert from "../common/Alert";
 
 /** Signup form.
@@ -39,10 +40,13 @@ function SignupForm({ signup }) {
   async function handleSubmit(evt) {
     evt.preventDefault();
     let result = await signup(formData);
+    console.log('here');
     if (result.success) {
-      history.push("/companies");
+      console.log('here2');
+      history.push("/SpellList");
     } else {
       setFormErrors(result.errors);
+            console.log('here3');
     }
   }
 
@@ -63,6 +67,7 @@ function SignupForm({ signup }) {
                   <label>Username</label>
                   <input
                       name="username"
+                      placeholder="Case Sensitive!"
                       className="form-control"
                       value={formData.username}
                       onChange={handleChange}
@@ -113,13 +118,23 @@ function SignupForm({ signup }) {
                     : null
                 }
 
-                <button
-                    type="submit"
-                    className="btn btn-primary float-right"
-                    onSubmit={handleSubmit}
-                >
-                  Submit
-                </button>
+                <div className="d-flex justify-content-between">
+                  <button
+                      type="submit"
+                      className="btn btn-primary float-right"
+                      onSubmit={handleSubmit}
+                  >
+                    Submit
+                  </button>
+                
+                  <button
+                    className="btn btn-secondary"
+                    onClick={() => history.push("/")}
+                  >
+                    <FaArrowLeft className="mr-2" />
+                    Go Back
+                  </button>
+                </div>
               </form>
             </div>
           </div>

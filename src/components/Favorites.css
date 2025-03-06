@@ -1,0 +1,63 @@
+.favorites-container {
+  min-height: 80vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.spell-entry {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+}
+
+.spell-entry h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.spell-details {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.button-container {
+  margin-top: 15px;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  background: #3EB489;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.remove-button {
+  background: #d9534f;
+}
+
+button:hover {
+  background: #368874;
+}
+
+.remove-button:hover {
+  background: #c9302c;
+}

@@ -1,0 +1,69 @@
+.spell-list-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.spell-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.spell-entry {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spell-entry:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.spell-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px;
+  background-color: #3EB489;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #368874;
+}
+
+.remove-button {
+  background-color: #d9534f;
+}
+
+.remove-button:hover {
+  background-color: #c9302c;
+}
+
+.spell-entry-link {
+  text-decoration: none;
+}
+
+.spell-entry-link:hover {
+  text-decoration: underline;
+}
